@@ -1,0 +1,1 @@
+export { GenericWrapper } from './GenericWrapper';

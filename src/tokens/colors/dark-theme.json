@@ -1,0 +1,238 @@
+{
+  "color": {
+    "text": {
+      "brand": {
+        "$type": "color",
+        "$value": "{BrandColor.500}"
+      },
+      "primary": {
+        "$type": "color",
+        "$value": "{White.1000}"
+      },
+      "secondary": {
+        "$type": "color",
+        "$value": "{White.400}"
+      },
+      "tertiary": {
+        "$type": "color",
+        "$value": "{White.200}"
+      },
+      "positive": {
+        "$type": "color",
+        "$value": "{Semantic.Green.500}"
+      },
+      "attention": {
+        "$type": "color",
+        "$value": "{Semantic.Yellow.500}"
+      },
+      "negative": {
+        "$type": "color",
+        "$value": "{Semantic.Red.500}"
+      },
+      "link": {
+        "$type": "color",
+        "$value": "{Semantic.Blue.500}"
+      },
+      "primary-inverted": {
+        "$type": "color",
+        "$value": "{Gray.1000}"
+      },
+      "secondary-inverted": {
+        "$type": "color",
+        "$value": "{AlphaGray.400}"
+      },
+      "tertiary-inverted": {
+        "$type": "color",
+        "$value": "{AlphaGray.200}"
+      },
+      "disabled": {
+        "$type": "color",
+        "$value": "{Gray.100}"
+      }
+    },
+    "graphic": {
+      "brand": {
+        "$type": "color",
+        "$value": "{BrandColor.500}"
+      },
+      "primary": {
+        "$type": "color",
+        "$value": "{White.1000}"
+      },
+      "secondary": {
+        "$type": "color",
+        "$value": "{White.400}"
+      },
+      "tertiary": {
+        "$type": "color",
+        "$value": "{White.200}"
+      },
+      "positive": {
+        "$type": "color",
+        "$value": "{Semantic.Green.500}"
+      },
+      "attention": {
+        "$type": "color",
+        "$value": "{Semantic.Yellow.500}"
+      },
+      "negative": {
+        "$type": "color",
+        "$value": "{Semantic.Red.500}"
+      },
+      "link": {
+        "$type": "color",
+        "$value": "{Semantic.Blue.500}"
+      },
+      "primary-inverted": {
+        "$type": "color",
+        "$value": "{Gray.1000}"
+      },
+      "secondary-inverted": {
+        "$type": "color",
+        "$value": "{AlphaGray.400}"
+      },
+      "tertiary-inverted": {
+        "$type": "color",
+        "$value": "{AlphaGray.200}"
+      },
+      "disabled": {
+        "$type": "color",
+        "$value": "{Gray.100}"
+      }
+    },
+    "background": {
+      "brand": {
+        "$type": "color",
+        "$value": "{BrandColor.500}"
+      },
+      "primary": {
+        "$type": "color",
+        "$value": "{Gray.100}"
+      },
+      "secondary": {
+        "$type": "color",
+        "$value": "{Gray.300}"
+      },
+      "tertiary": {
+        "$type": "color",
+        "$value": "{Gray.400}"
+      },
+      "quaternary": {
+        "$type": "color",
+        "$value": "{White.1000}"
+      },
+      "quinary": {
+        "$type": "color",
+        "$value": "{Gray.50}"
+      },
+      "overlay": {
+        "$type": "color",
+        "$value": "{AlphaGray.400}"
+      },
+      "primary-inverted": {
+        "$type": "color",
+        "$value": "{Gray.980}"
+      },
+      "secondary-inverted": {
+        "$type": "color",
+        "$value": "{Gray.960}"
+      },
+      "tertiary-inverted": {
+        "$type": "color",
+        "$value": "{Gray.1000}"
+      },
+      "quaternary-inverted": {
+        "$type": "color",
+        "$value": "{Gray.920}"
+      },
+      "positive": {
+        "$type": "color",
+        "$value": "{Semantic.Green.500}"
+      },
+      "attention": {
+        "$type": "color",
+        "$value": "{Semantic.Yellow.500}"
+      },
+      "negative": {
+        "$type": "color",
+        "$value": "{Semantic.Red.500}"
+      },
+      "skeleton": {
+        "$type": "color",
+        "$value": "{Gray.250}"
+      }
+    },
+    "stroke": {
+      "brand": {
+        "$type": "color",
+        "$value": "{BrandColor.500}"
+      },
+      "primary": {
+        "$type": "color",
+        "$value": "{Gray.960}"
+      },
+      "secondary": {
+        "$type": "color",
+        "$value": "{Gray.940}"
+      },
+      "tertiary": {
+        "$type": "color",
+        "$value": "{Gray.920}"
+      },
+      "quaternary": {
+        "$type": "color",
+        "$value": "{Gray.900}"
+      },
+      "quinary": {
+        "$type": "color",
+        "$value": "{White.50}"
+      },
+      "primary-inverted": {
+        "$type": "color",
+        "$value": "{White.900}"
+      },
+      "secondary-inverted": {
+        "$type": "color",
+        "$value": "{White.800}"
+      },
+      "tertiary-inverted": {
+        "$type": "color",
+        "$value": "{White.700}"
+      },
+      "quaternary-inverted": {
+        "$type": "color",
+        "$value": "{White.600}"
+      },
+      "white": {
+        "$type": "color",
+        "$value": "{Gray.1000}"
+      },
+      "negative": {
+        "$type": "color",
+        "$value": "{Semantic.Red.500}"
+      },
+      "disabled": {
+        "$type": "color",
+        "$value": "{Gray.100}"
+      }
+    },
+    "overlay": {
+      "Hover": {
+        "$type": "color",
+        "$value": "{White.50}"
+      },
+      "Hover-inverted": {
+        "$type": "color",
+        "$value": "{AlphaGray.50}"
+      },
+      "Pressed": {
+        "$type": "color",
+        "$value": "{White.200}"
+      },
+      "Pressed-inverted": {
+        "$type": "color",
+        "$value": "{AlphaGray.200}"
+      }
+    }
+  }
+}

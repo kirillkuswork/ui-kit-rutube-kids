@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "lib": ["DOM", "DOM.Iterable", "ES6",],
+    "strict": true,
+    "target": "es5",
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "react",
+    "outDir": "dist",
+    "baseUrl": ".",
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+    "noUncheckedIndexedAccess": true,
+    "paths": {
+      "@/*": ["./src/*"],
+    }
+  },
+  "include": [
+    "./src",
+    "tailwind.config.ts",
+    "src/custom.d.ts",
+  ],
+  "exclude": [
+    "node_modules",
+    "build",
+    "dist",
+    "scripts",
+    "jest",
+    "./src/fonts.css",
+  ],
+  "references": [{ "path": "./tsconfig.vite.json" }]
+}

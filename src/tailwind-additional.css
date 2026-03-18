@@ -1,0 +1,154 @@
+.primary-btn-double-bg:hover,
+.primary-btn-double-bg:active,
+.primary-btn-double-bg:focus {
+  background-image: linear-gradient(to right, rgba(252, 32, 60, 0.8), rgba(252, 32, 60, 0.8)), linear-gradient(to right, white, white);
+}
+
+.primary-dashed-gradient {
+  background: repeating-linear-gradient(-60deg, rgba(252, 32, 60, 0.8) 0, rgba(252, 32, 60, 0.8) 1px, transparent 1px, transparent 2px)
+}
+
+/*
+  этот селектор скрывает поповер если элемент-якорь уходит за viewport,
+  в некоторых случаях может быть полезно, но глобально применять не стоит.
+*/
+/* [data-popper-reference-hidden='true'] {
+  opacity: 0;
+  pointer-events: none;
+} */
+
+
+/*
+Маски для определенных форм элементов
+*/
+.superellipse{
+  mask-image: url('./assets/masks/superEllipse.svg');
+  mask-size: cover;
+}
+
+.cropped-superellipse-both {
+  mask-image: url('./assets/masks/croppedSuperEllipseBoth.svg');
+  mask-size: cover;
+}
+
+.cropped-superellipse-bottom {
+  mask-image: url('./assets/masks/croppedSuperEllipseBottom.svg');
+  mask-size: cover;
+}
+
+.cropped-superellipse-top {
+  mask-image: url('./assets/masks/croppedSuperEllipseTop.svg');
+  mask-size: cover;
+}
+
+@layer base {
+  html {
+    font-family: Inter, system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .super-ellipse {
+    clip-path: polygon(1.626% 25.658%,1.626% 25.658%,2.397% 21.946%,3.603% 18.453%,5.217% 15.206%,7.21% 12.232%,9.558% 9.558%,12.232% 7.21%,15.206% 5.217%,18.453% 3.603%,21.946% 2.397%,25.658% 1.626%,25.658% 1.626%,27.653% 1.354%,29.746% 1.1%,31.936% 0.865%,34.224% 0.652%,36.609% 0.465%,39.092% 0.305%,41.673% 0.176%,44.351% 0.08%,47.127% 0.02%,50% 0%,50% 0%,52.873% 0.02%,55.649% 0.08%,58.327% 0.176%,60.908% 0.305%,63.391% 0.465%,65.776% 0.652%,68.064% 0.865%,70.254% 1.1%,72.347% 1.354%,74.342% 1.626%,74.342% 1.626%,78.054% 2.397%,81.547% 3.603%,84.794% 5.217%,87.768% 7.21%,90.442% 9.558%,92.79% 12.232%,94.783% 15.206%,96.397% 18.453%,97.603% 21.946%,98.375% 25.658%,98.375% 25.658%,98.646% 27.653%,98.9% 29.746%,99.135% 31.936%,99.348% 34.224%,99.535% 36.609%,99.695% 39.092%,99.824% 41.673%,99.92% 44.351%,99.98% 47.127%,100% 50%,100% 50%,99.98% 52.873%,99.92% 55.649%,99.824% 58.327%,99.695% 60.908%,99.535% 63.391%,99.348% 65.776%,99.135% 68.064%,98.9% 70.254%,98.646% 72.347%,98.375% 74.342%,98.375% 74.342%,97.603% 78.054%,96.397% 81.547%,94.783% 84.794%,92.79% 87.768%,90.442% 90.442%,87.768% 92.79%,84.794% 94.783%,81.547% 96.397%,78.054% 97.603%,74.342% 98.375%,74.342% 98.375%,72.347% 98.646%,70.254% 98.9%,68.064% 99.135%,65.776% 99.348%,63.391% 99.535%,60.908% 99.695%,58.327% 99.824%,55.649% 99.92%,52.873% 99.98%,50% 100%,50% 100%,47.127% 99.98%,44.351% 99.92%,41.673% 99.824%,39.092% 99.695%,36.609% 99.535%,34.224% 99.348%,31.936% 99.135%,29.746% 98.9%,27.653% 98.646%,25.658% 98.375%,25.658% 98.375%,21.946% 97.603%,18.453% 96.397%,15.206% 94.783%,12.232% 92.79%,9.558% 90.442%,7.21% 87.768%,5.217% 84.794%,3.603% 81.547%,2.397% 78.054%,1.626% 74.342%,1.626% 74.342%,1.354% 72.347%,1.1% 70.254%,0.865% 68.064%,0.652% 65.776%,0.465% 63.391%,0.305% 60.908%,0.176% 58.327%,0.08% 55.649%,0.02% 52.873%,0% 50%,0% 50%,0.02% 47.127%,0.08% 44.351%,0.176% 41.673%,0.305% 39.092%,0.465% 36.609%,0.652% 34.224%,0.865% 31.936%,1.1% 29.746%,1.354% 27.653%,1.626% 25.658%);
+  }
+
+  .no-appearance {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+
+  .autofill-text-white:-webkit-autofill,
+  .autofill-text-white:-webkit-autofill:hover,
+  .autofill-text-white:-webkit-autofill:focus {
+    -webkit-text-fill-color: #FFFFFF;
+    caret-color: #FFFFFF !important;
+    color: #FFFFFF !important;
+    transition: background-color 5000s ease-in-out 0s;
+  }
+
+  .autofill-text-black:-webkit-autofill,
+  .autofill-text-black:-webkit-autofill:hover,
+  .autofill-text-black:-webkit-autofill:focus {
+    -webkit-text-fill-color: #212226;
+    caret-color: #212226 !important;
+    color: #212226 !important;
+    transition: background-color 5000s ease-in-out 0s;
+  }
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+      display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+  }
+
+  .scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #FFFFFF transparent;
+    transform: translateX(-3px);
+  }
+
+
+  .scrollbar::-webkit-scrollbar-button {
+    width: 4px;
+    height: 0;
+  }
+
+  .scrollbar::-webkit-scrollbar-track {
+    background-color: transparent;
+    -webkit-border-radius: 100px;
+    border-radius: 100px;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 100px;
+    background-color: rgba(62, 71, 88, 0.26);
+    border-radius: 100px;
+  }
+
+  .scrollbar::-webkit-resizer {
+    width: 4px;
+    height: 0;
+  }
+
+  .scrollbar::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type='number'] {
+    -moz-appearance: textfield; /*For FireFox*/
+  }
+
+}
+
+@layer components {
+  .control-state {
+    @apply relative after:content-[''] after:absolute after:top-0 after:left-0 after:w-full after:h-full;
+  }
+
+  .control-state-shade {
+    @apply control-state after:hover:bg-light-overlay-Hover after:active:bg-light-overlay-Pressed dark:after:hover:bg-dark-overlay-Hover dark:after:active:bg-dark-overlay-Pressed;
+  }
+
+  .control-state-tint {
+    @apply control-state after:hover:bg-light-overlay-Hover-inverted after:active:bg-light-overlay-Pressed-inverted dark:after:hover:bg-dark-overlay-Hover-inverted dark:after:active:bg-dark-overlay-Pressed-inverted;
+  }
+
+  .animate-skeleton {
+    @apply relative overflow-hidden rounded-md bg-light-background-primary dark:bg-dark-background-primary before:absolute before:inset-0 before:-translate-x-full before:bg-gradient-to-r before:from-transparent before:via-light-background-secondary dark:before:via-dark-background-secondary before:animate-[shimmer_1.5s_infinite]
+  }
+}
+
+
+
+

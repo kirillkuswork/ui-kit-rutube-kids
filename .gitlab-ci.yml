@@ -1,0 +1,58 @@
+image: ${DOCKER_PUBLIC_REGISTRY}/docker:20.10.17
+
+stages:
+  - build
+  - deploy
+  - publish
+
+variables:
+  DOCKER_DRIVER: overlay2
+  DOCKER_TLS_CERTDIR: ""
+  IMAGE_TAG: ${CI_COMMIT_REF_SLUG}-${CI_PIPELINE_ID}-${CI_COMMIT_SHORT_SHA}
+
+build:
+  stage: build
+  tags:
+    - md2
+  rules:
+    - if: $CI_COMMIT_TAG
+      when: always
+  before_script:
+    - docker login -u "$NEXUS_DOCKER_REGISTRY_USER" -p "$NEXUS_DOCKER_REGISTRY_PASSWORD" $NEXUS_DOCKER_RUPOR
+  script:
+    - docker build --no-cache --target=builder -t $NEXUS_DOCKER_RUPOR/rupor/$CI_PROJECT_NAME:$IMAGE_TAG-builder .
+    - docker push $NEXUS_DOCKER_RUPOR/rupor/$CI_PROJECT_NAME:$IMAGE_TAG-builder
+
+    - docker build --cache-from $NEXUS_DOCKER_RUPOR/rupor/$CI_PROJECT_NAME:$IMAGE_TAG-builder -t $NEXUS_DOCKER_RUPOR/rupor/$CI_PROJECT_NAME:$IMAGE_TAG .
+    - docker push $NEXUS_DOCKER_RUPOR/rupor/$CI_PROJECT_NAME:$IMAGE_TAG
+
+deploy-dev:
+  stage: deploy
+  image: ${DOCKER_PUBLIC_REGISTRY}/dtzar/helm-kubectl:3.9
+  tags:
+    - md2
+  rules:
+    - if: $CI_COMMIT_TAG
+      when: manual
+  script:
+    - export KUBECONFIG=${K8S_MD2}
+    - helm repo add rupor ${CI_API_V4_URL}/projects/221/packages/helm/stable --username ${CI_REGISTRY_USER} --password ${CI_REGISTRY_PASSWORD}
+    - cd .cicd
+    - helm version
+    - helm repo update
+    - helm upgrade --install cyber-ui-kit rupor/rupor-common-helm -n cyber-ui-kit-dev -f k8s/values.yaml
+      --set image.repository="$NEXUS_DOCKER_RUPOR/rupor/$CI_PROJECT_NAME"
+      --set image.tag="$IMAGE_TAG"
+      --set env.base.APP_VERSION="$CI_COMMIT_TAG"
+
+publish:
+  stage: publish
+  image: $NEXUS_DOCKER_RUPOR/rupor/$CI_PROJECT_NAME:$IMAGE_TAG-builder
+  tags:
+    - md2
+  rules:
+    - if: $CI_COMMIT_TAG
+      when: manual
+  script:
+    - cd /home/node/app
+    - pnpm publish --no-git-checks

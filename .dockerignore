@@ -1,0 +1,5 @@
+.cicd
+.git
+.gitignore
+.gitlab-ci.yml
+Dockerfile

@@ -1,0 +1,11 @@
+node_modules
+storybook-static/
+tailwind.config.ts
+
+
+# yarn
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions

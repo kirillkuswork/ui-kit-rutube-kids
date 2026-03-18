@@ -1,0 +1,1 @@
+export { BreakpointDecorator } from './BreakpointDecorator';

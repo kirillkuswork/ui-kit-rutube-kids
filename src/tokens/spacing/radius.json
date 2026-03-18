@@ -1,0 +1,46 @@
+{
+    "zero": {
+      "$type": "number",
+      "$value": 0
+    },
+    "0,5x": {
+      "$type": "number",
+      "$value": 2
+    },
+    "1x": {
+      "$type": "number",
+      "$value": 4
+    },
+    "2x": {
+      "$type": "number",
+      "$value": 8
+    },
+    "3x": {
+      "$type": "number",
+      "$value": 12
+    },
+    "4x": {
+      "$type": "number",
+      "$value": 16
+    },
+    "5x": {
+      "$type": "number",
+      "$value": 20
+    },
+    "6x": {
+      "$type": "number",
+      "$value": 24
+    },
+    "7x": {
+      "$type": "number",
+      "$value": 28
+    },
+    "8x": {
+      "$type": "number",
+      "$value": 32
+    },
+    "absolute": {
+      "$type": "number",
+      "$value": 1000
+    }
+  }

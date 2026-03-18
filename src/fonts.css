@@ -1,0 +1,17 @@
+@font-face {
+    font-family: "Inter";
+    font-weight: bold;
+    src: url(../storybook-assets/Inter-Bold.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: "Inter";
+    font-weight: bold;
+    src: url(../storybook-assets/Inter-SemiBold.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: "Inter";
+    font-weight: normal;
+    src: url(../storybook-assets/Inter-Regular.woff2) format('woff2');
+}
